@@ -5,10 +5,20 @@ var makeRequest = function( url ) {
   request.open( "GET", url );
   request.addEventListener( "load", function() {
   var countries = JSON.parse( this.responseText )
-  console.log(countries);
+  getEuropeanCountries(countries);
   })
   request.send();
 }
+
+var getEuropeanCountries = function(countriesArray){
+  var europeanCountries = countriesArray.filter(function(country){
+    return country.region === "Europe";
+  });
+console.log(europeanCountries);
+return europeanCountries;
+}
+
+
 
 var initialize = function(){
 makeRequest(url);
