@@ -14,11 +14,19 @@ var getEuropeanCountries = function(countriesArray){
   var europeanCountries = countriesArray.filter(function(country){
     return country.region === "Europe";
   });
-console.log(europeanCountries);
-return europeanCountries;
+  console.log(europeanCountries);
+  populateCountryDropdown(europeanCountries);
+  return europeanCountries;
 }
 
-
+var populateCountryDropdown = function(countriesArray){
+  var dropdown = document.getElementById("select-country");
+  for(var country of countriesArray){
+    var countryOption = document.createElement("option");
+    countryOption.textContent = country.name;
+    dropdown.appendChild(countryOption);
+  }
+}
 
 var initialize = function(){
 makeRequest(url);
