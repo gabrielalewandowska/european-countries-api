@@ -3,6 +3,13 @@ var clearDisplay = function(){
   display.innerHTML = "";
 }
 
+var getArea = function(country){
+  var countryDiv = document.getElementById("country-info");
+  var area = document.createElement("p");
+  area.innerText = "Area: " + country.area;
+  countryDiv.appendChild(area);
+}
+
 var getCurrency = function(country){
   var countryDiv = document.getElementById("country-info");
   var currency = document.createElement("p");
@@ -58,6 +65,18 @@ var getLanguages = function(country){
   countryDiv.appendChild(languages);
 }
 
+var renderMap = function(lat, lng){
+  var coordinates = {lat: lat, lng: lng}
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 5,
+    center: coordinates
+  });
+  var marker = new google.maps.Marker({
+    position: coordinates,
+    map: map
+  });
+}
+
 var displayCountry = function(){
   clearDisplay();
   for(var country of europeanCountries){
@@ -65,9 +84,11 @@ var displayCountry = function(){
       getCountryNameHeadline(country);
       getFlag(country);
       getPopulation(country);
+      getArea(country);
       getCapital(country);
       getLanguages(country);
       getCurrency(country);
+      renderMap(country.latlng[0], country.latlng[1]);
     }
   }
 }
