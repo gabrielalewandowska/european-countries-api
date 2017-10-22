@@ -31,6 +31,7 @@ var populateCountryDropdown = function(countriesArray){
   var statsBtn = document.getElementById("btn-stats");
   statsBtn.addEventListener("click", function(){
     drawPopulationChart(countriesArray);
+    drawPieChart(countriesArray);
   });
 }
 
