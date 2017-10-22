@@ -32,3 +32,8 @@ var countryDataObject = function(name, data){
   var container = document.getElementById("chart-area");
    PieChart("Countries by area size", data, container);
 }
+
+  var clearAreaChart = function(){
+    var container = document.getElementById("chart-area");
+    container.innerHTML = "";
+  }

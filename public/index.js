@@ -30,8 +30,10 @@ var populateCountryDropdown = function(countriesArray){
 
   var statsBtn = document.getElementById("btn-stats");
   statsBtn.addEventListener("click", function(){
+    clearDisplay();
     drawPopulationChart(countriesArray);
     drawPieChart(countriesArray);
+    renderMap(54.525961, 15.255119, 3);
   });
 }
 

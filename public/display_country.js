@@ -65,10 +65,10 @@ var getLanguages = function(country){
   countryDiv.appendChild(languages);
 }
 
-var renderMap = function(lat, lng){
+var renderMap = function(lat, lng, zoom){
   var coordinates = {lat: lat, lng: lng}
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 5,
+    zoom: zoom,
     center: coordinates
   });
   var marker = new google.maps.Marker({
@@ -79,6 +79,9 @@ var renderMap = function(lat, lng){
 
 var displayCountry = function(){
   clearDisplay();
+  clearAreaChart();
+  clearPopulationChart();
+
   for(var country of europeanCountries){
     if(country.name === this.value){
       getCountryNameHeadline(country);
@@ -88,7 +91,7 @@ var displayCountry = function(){
       getCapital(country);
       getLanguages(country);
       getCurrency(country);
-      renderMap(country.latlng[0], country.latlng[1]);
+      renderMap(country.latlng[0], country.latlng[1], 5);
     }
   }
 }
