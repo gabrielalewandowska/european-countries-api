@@ -27,6 +27,11 @@ var populateCountryDropdown = function(countriesArray){
     countryDropdown.appendChild(countryOption);
   }
   countryDropdown.addEventListener("change", displayCountry);
+
+  var statsBtn = document.getElementById("btn-stats");
+  statsBtn.addEventListener("click", function(){
+    drawPopulationChart(countriesArray);
+  });
 }
 
 
