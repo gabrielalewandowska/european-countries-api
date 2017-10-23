@@ -10,6 +10,17 @@ var makeRequest = function() {
   request.send();
 }
 
+var displayBannerText = function(textToDisplay){
+  var text = document.getElementById("banner");
+  text.innerText = textToDisplay;
+}
+
+var initialize = function(){
+  displayBannerText("Welcome!");
+  makeRequest();
+  renderMap(54.525961, 15.255119, 3);
+}
+
 var getEuropeanCountries = function(countriesArray){
   europeanCountries = countriesArray.filter(function(country){
     return country.region === "Europe";
@@ -31,6 +42,7 @@ var populateCountryDropdown = function(countriesArray){
   var statsBtn = document.getElementById("btn-stats");
   statsBtn.addEventListener("click", function(){
     clearDisplay();
+    displayBannerText("Statistics");
     drawPopulationChart(countriesArray);
     drawPieChart(countriesArray);
     renderMap(54.525961, 15.255119, 3);
@@ -39,7 +51,4 @@ var populateCountryDropdown = function(countriesArray){
 
 
 
-
-
-
-window.addEventListener("load", makeRequest);
+window.addEventListener("load", initialize);

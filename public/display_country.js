@@ -1,5 +1,5 @@
-var clearCountryNameHeadline = function(){
-  var countryDiv = document.getElementById("country-name-header");
+var clearBannerText = function(){
+  var countryDiv = document.getElementById("banner");
   countryDiv.innerHTML = "";
 }
 
@@ -13,7 +13,7 @@ var clearCountryInfo = function(){
   display.innerHTML = "";
 }
 var clearDisplay = function(){
-  clearCountryNameHeadline();
+  clearBannerText();
   clearFlag();
   clearCountryInfo();
 }
@@ -54,10 +54,8 @@ var getFlag = function(country){
 }
 
 var getCountryNameHeadline = function(country){
-  var countryDiv = document.getElementById("country-name-header");
-  var nameHeadline = document.createElement("h2");
-  nameHeadline.innerText = country.name;
-  countryDiv.appendChild(nameHeadline);
+  var banner = document.getElementById("banner");
+  banner.innerText= country.name;
 }
 
 var getLanguages = function(country){
