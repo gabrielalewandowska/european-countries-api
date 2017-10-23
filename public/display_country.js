@@ -1,5 +1,5 @@
 var clearDisplay = function(){
-  var display = document.getElementById("country-info");
+  var display = document.getElementsByClassName("country-container");
   display.innerHTML = "";
 }
 
@@ -32,14 +32,14 @@ var getPopulation = function(country){
 }
 
 var getFlag = function(country){
-  var countryDiv = document.getElementById("country-info");
+  var countryDiv = document.getElementById("country-flag");
   var flag = document.createElement("img");
   flag.src = country.flag;
   countryDiv.appendChild(flag);
 }
 
 var getCountryNameHeadline = function(country){
-  var countryDiv = document.getElementById("country-info");
+  var countryDiv = document.getElementById("country-name-header");
   var nameHeadline = document.createElement("h2");
   nameHeadline.innerText = country.name;
   countryDiv.appendChild(nameHeadline);

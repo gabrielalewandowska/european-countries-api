@@ -11,11 +11,20 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <select id="select-country">
-    <option disable selected>Select a country</option>
-  </select>
-  <button type="button" id="btn-stats">View stats</button>
-  <div id="country-info"></div>
+    <div id="banner">
+      <p>Hello</p>
+    </div>
+    <div class="options">
+      <select id="select-country">
+      <option disable selected>Select a country</option>
+    </select>
+    <button type="button" id="btn-stats">View stats</button>
+    </div>
+  <div id="country-name-header"></div>
+  <div class="country-container">
+    <div id="country-info"></div>
+    <div id="country-flag"></div>
+  </div>
   <div id="chart-population" width="500" height="400"></div>
   <div id="chart-area" width="500" height="400"></div>
   <div id="map"></div>

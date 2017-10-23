@@ -1,8 +1,73 @@
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+#banner {
+  background-color: hotpink;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.options {
+  background-color: dodgerblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#select-country {
+  margin: 10%;
+  max-width: 100%;
+}
+
+#btn-stats {
+  margin: 10%;
+}
+
+.country-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: tomato;
+}
+
+#country-name-header {
+  display: flex;
+  justify-content: center;
+}
+
+#country-info {
+  display: flex, block;
+  background-color: wheat;
+  max-width: 30%;
+}
+
+/* #country-flag {
+  width: 30%;
+} */
+
 img {
-  max-width: 25%;
+  width: 25%;
+}
+
+#chart-population {
+  background-color: tomato;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#chart-area {
+  background-color: yellow;
+  margin-bottom: 10%;
 }
 
 #map {
+  display: flex;
   height: 400px;
-  width: 100%;
+  max-width: 100%;
 }
