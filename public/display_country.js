@@ -1,6 +1,21 @@
-var clearDisplay = function(){
-  var display = document.getElementsByClassName("country-container");
+var clearCountryNameHeadline = function(){
+  var countryDiv = document.getElementById("country-name-header");
+  countryDiv.innerHTML = "";
+}
+
+var clearFlag = function(){
+  var countryDiv = document.getElementById("country-flag");
+  countryDiv.innerHTML = "";
+}
+
+var clearCountryInfo = function(){
+  var display = document.getElementById("country-info");
   display.innerHTML = "";
+}
+var clearDisplay = function(){
+  clearCountryNameHeadline();
+  clearFlag();
+  clearCountryInfo();
 }
 
 var getArea = function(country){
