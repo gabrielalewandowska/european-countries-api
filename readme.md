@@ -1,12 +1,12 @@
-## Weekend homework
+# Weekend homework
 
-# Key learning to practise and/or revise:
+## Key learning to practise and/or revise:
 
 - Manipulating the DOM - selecting/creating/appending elements
 - Using event listeners to make our apps interactive
 - Making an HTTP request to retrieve some data and then using it
 
-# Task:
+## Task:
 
 Practise what we've done this week using JavaScript in the browser:
 
