@@ -1,5 +1,7 @@
 # Weekend homework
 
+You can view the app on heroku: https://european-countries.herokuapp.com/
+
 ## Key learning to practise and/or revise:
 
 - Manipulating the DOM - selecting/creating/appending elements
@@ -11,7 +13,7 @@
 Practise what we've done this week using JavaScript in the browser:
 
 - Fetch information from an API.
-- Display/Analyse the information in the browser using DOM manipulation/Charts/Maps/Canvas etc. 
+- Display/Analyse the information in the browser using DOM manipulation/Charts/Maps/Canvas etc.
 
 ---
 The API I chose for the project:
